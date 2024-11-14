@@ -68,7 +68,7 @@ Here, set is the set containing the distinct heights. Using the sum() and len() 
 """
 def average(array):
     # your code goes here
-    unique_heights = set(arr)
+    unique_heights = set(array)
     
     # Calculate the average of unique heights
     average_height = sum(unique_heights) / len(unique_heights)
