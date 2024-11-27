@@ -36,7 +36,7 @@ Sample Output
 8
 Explanation
 
-The list of room numbers contains  elements. Since  is , there must be  groups of families. In the given list, all of the numbers repeat  times except for room number .
+The list of room numbers contains 31 elements. Since K is 5, there must be  groups of families. In the given list, all of the numbers repeat  times except for room number 8.
 Hence, 8 is the Captain's room number.
 """
 # Read input
