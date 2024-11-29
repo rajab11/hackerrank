@@ -59,10 +59,18 @@ n_other_sets = int(input())  # Number of other sets
 
 # Perform operations based on the input
 for _ in range(n_other_sets):
-    operation, _ = input().split()  # Read operation name
+    operation= input().split()  # Read operation name
+    command=operation[0]
+
     other_set = set(map(int, input().split()))  # Read the other set
-    # Apply the operation on set A
-    getattr(A, operation)(other_set)
+    if operation=='intersection_update':
+        A.intersection_update(other_set)
+    if operation=='update':
+        A.update(other_set)
+    if operation=='symmetric_difference_update':
+        A.symmetric_difference_update(other_set)
+    if operation=='difference_update':
+        A.difference_update(other_set)
 
 # Output the sum of elements in set A
 print(sum(A))
