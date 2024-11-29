@@ -1,46 +1,41 @@
 """
-Students of District College have subscriptions to English and French newspapers. Some students have subscribed to English only, some have subscribed to French only, and some have subscribed to both newspapers.
-
-You are given two sets of student roll numbers. One set has subscribed to the English newspaper, and one set has subscribed to the French newspaper. Your task is to find the total number of students who have subscribed to either the English or the French newspaper but not both.
+Given  sets of integers,  and , print their symmetric difference in ascending order. The term symmetric difference indicates those values that exist in either  or  but do not exist in both.
 
 Input Format
 
-The first line contains the number of students who have subscribed to the English newspaper.
-The second line contains the space separated list of student roll numbers who have subscribed to the English newspaper.
-The third line contains the number of students who have subscribed to the French newspaper.
-The fourth line contains the space separated list of student roll numbers who have subscribed to the French newspaper.
-
-Constraints
-
+The first line of input contains an integer, .
+The second line contains  space-separated integers.
+The third line contains an integer, .
+The fourth line contains  space-separated integers.
 
 Output Format
 
-Output total number of students who have subscriptions to the English or the French newspaper but not both.
+Output the symmetric difference integers in ascending order, one per line.
 
 Sample Input
 
-9
-1 2 3 4 5 6 7 8 9
-9
-10 1 2 3 11 21 55 6 8
+STDIN       Function
+-----       --------
+4           set a size M = 4
+2 4 5 9     a = {2, 4, 5, 9}
+4           set b size N = 4
+2 4 11 12   b = {2, 4, 11, 12}
 Sample Output
 
-8
-Explanation
-
-The roll numbers of students who have subscriptions to English or French newspapers but not both are:
-4,5,7,9,10,11,21 and 55 .
-Hence, the total is  students.
+5
+9
+11
+12
 """
-english_count = int(input())
-english_subs = set(map(int, input().split()))
+m = int(input().strip())  # Read the number of elements in the first set
+set_m = set(map(int, input().strip().split()))  # Read elements and convert to set
 
-# Input the number of students subscribed to the French newspaper
-french_count = int(input())
-french_subs = set(map(int, input().split()))
+n = int(input().strip())  # Read the number of elements in the second set
+set_n = set(map(int, input().strip().split()))  # Read elements and convert to set
 
-# Use the difference method to find students subscribed only to English
-only_english = english_subs.difference(french_subs)
+# Step 2: Find the symmetric difference and sort the result
+symmetric_diff = sorted(set_m.symmetric_difference(set_n))
 
-# Output the number of such students
-print(len(only_english))
+# Step 3: Output each element on a new line
+for num in symmetric_diff:
+    print(num)
