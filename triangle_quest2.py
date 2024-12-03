@@ -48,6 +48,6 @@ for i in range(1,n+1):
         print(j,end='')
     print()
 """    
-#task's condition was that we can use only 1 print operator
+#task's condition was that we can use only 1 print functions
 for i in range(1, int(input()) + 1): 
     print(((10**i - 1)//9)**2)
