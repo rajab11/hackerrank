@@ -37,6 +37,9 @@ Sample Output
 1234321
 123454321
 """
+
+"""
+--this code works fine and we must redo it for sake of task's condition
 n=int(input())
 for i in range(1,n+1):
     for j in range(1,i+1):
@@ -44,3 +47,7 @@ for i in range(1,n+1):
     for j in range(i-1,0,-1):
         print(j,end='')
     print()
+"""    
+#task's condition was that we can use only 1 print operator
+for i in range(1, int(input()) + 1): 
+    print(((10**i - 1)//9)**2)
