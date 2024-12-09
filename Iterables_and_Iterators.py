@@ -48,6 +48,7 @@ k = int(input())  # Number of indices to select
 # Count occurrences of 'a'
 m = letters.count('a')
 
+
 # Calculate total combinations
 from math import comb
 total_combinations = comb(n, k)
