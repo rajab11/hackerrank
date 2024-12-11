@@ -38,6 +38,8 @@ Out of these  combinations,  of them contain either index  or index  which are t
 
 Hence, the answer is 5/6.
 """
+from math import comb
+
 #Input
 n = int(input())  # Length of the list
 letters = input().split()  # List of letters
@@ -46,9 +48,7 @@ k = int(input())  # Number of indices to select
 # Count occurrences of 'a'
 m = letters.count('a')
 
-
 # Calculate total combinations
-from math import comb
 total_combinations = comb(n, k)
 
 # Calculate unfavorable combinations
