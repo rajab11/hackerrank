@@ -18,10 +18,6 @@ The next  lines each contains an integer , denoting the number of elements in th
 
 Constraints
 
-
-
-
-
 Output Format
 
 Output a single integer denoting the value .
@@ -51,7 +47,6 @@ def maximize_modulo(k, M, lists):
         # Calculate the value of S
         current_value = sum(x ** 2 for x in combination) % M
         max_value = max(max_value, current_value)
-    
     return max_value
 
 # Input
