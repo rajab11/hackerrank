@@ -14,11 +14,6 @@ The first line contains an integer , the total number of students.
 The second line contains the names of the columns in any order.
 The next  lines contains the , ,  and , under their respective column names.
 
-Constraints
-
-
-Output Format
-
 Print the average marks of the list corrected to 2 decimal places.
 
 Sample Input
@@ -49,13 +44,6 @@ TESTCASE 01
 TESTCASE 02
 
 81.00
-Explanation
-
-TESTCASE 01
-
-Average = 
-
-Can you solve this challenge in 4 lines of code or less?
 NOTE: There is no penalty for solutions that are correct but have more than 4 lines.
 """
 from collections import namedtuple
