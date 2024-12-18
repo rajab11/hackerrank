@@ -13,7 +13,7 @@ The third line contains , the number of customers.
 The next  lines contain the space separated values of the  desired by the customer and , the price of the shoe.
 
 Constraints
-
+0<X<10
 Output Format
 
 Print the amount of money earned by .
@@ -45,23 +45,19 @@ Total money earned =  200
 """
 from collections import Counter
 
-# Input reading
-number_of_shoes = int(input())
-shoe_sizes = list(map(int, input().split()))
-number_of_customers = int(input())
+#inputs
+number_of_shoes=int(input())
+shoe_sizes=list(map(int,input().split()))
+number_of_customers=int(input())
 
-# Create inventory counter
-inventory = Counter(shoe_sizes)
+#creating inventory
+inventory=Counter(shoe_sizes)
 
-# Initialize earnings
-earnings = 0
+earnings=0
 
-# Process each customer
 for _ in range(number_of_customers):
-    size, price = map(int, input().split())
-    if inventory[size] > 0:  # Check if the size is available
-        earnings += price
-        inventory[size] -= 1  # Reduce the count for that size
-
-# Output total earnings
-print(earnings)
+    size,price=map(int,input().split())
+    if inventory[size]>0:
+        earnings+=price
+        inventory[size]-=1
+print(earnings) #output
