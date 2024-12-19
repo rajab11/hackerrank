@@ -48,30 +48,15 @@ NOTE: There is no penalty for solutions that are correct but have more than 4 li
 """
 from collections import namedtuple
 
-def calculate_average_marks(data):
-    # Parse the number of students
-    n = int(data[0])
+n=int(input())
 
-    # Parse column headers and create a namedtuple for the columns
-    headers = data[1].split()
-    Student = namedtuple('Student', headers)
+header=input().strip().split()
+Student=namedtuple('Student',header)
 
-    # Parse student data and compute the sum of marks
-    students = [Student(*row.split()) for row in data[2:2 + n]]
-    marks_sum = sum(float(student.MARKS) for student in students)
-
-    # Return the average marks rounded to 2 decimal places
-    return f"{marks_sum / n:.2f}"
-
-# Example usage with predefined input data
-data = [
-    "5",
-    "ID MARKS NAME CLASS",
-    "1 97 Raymond 7",
-    "2 50 Steven 4",
-    "3 91 Adrian 9",
-    "4 72 Stewart 5",
-    "5 80 Peter 6"
-]
-
-print(calculate_average_marks(data))
+students=[]
+for _ in range(n):
+    row=input().strip().split()
+    students.append(Student(*row))
+    
+average_marks=sum(int(student.MARKS) for student in students)/n
+print(f"{average_marks:.2f}")
