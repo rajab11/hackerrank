@@ -1,2 +1,5 @@
-
-Find the Runner-Up Score\!.py
+# .gitignore
+.env
+.venv
+venv/
+env/
