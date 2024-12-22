@@ -16,9 +16,7 @@ if __name__ == '__main__':
     fptr =open('output.txt', 'w')
 
     s = input()
-
     result = solve(s)
 
     fptr.write(result + '\n')
-
     fptr.close()
