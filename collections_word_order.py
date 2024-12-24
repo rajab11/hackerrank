@@ -34,20 +34,21 @@ Explanation
 
 There are  distinct words. Here, "bcdef" appears twice in the input at the first and last positions. The other words appear once each. The order of the first appearances are "bcdef", "abcdefg" and "bcde" which corresponds to the output
 """
+from collections import OrderedDict
 #input
 n=int(input()) # number of words
 items=[input().strip() for _ in range(n)] #list of words
 
 #process
-unique_words=[]
-counts=[]
+freq = OrderedDict()
 
 for word in items:
-    if word not in unique_words:
-        unique_words.append(word)
-        counts.append(items.count(word))
+    if word in freq:
+        freq[word] += 1
+    else:
+        freq[word] = 1
 
-#output
-print(len(unique_words))
-print(' '.join(map(str,counts)))
-      
+# Output
+
+print(len(freq))  # Number of unique words
+print(' '.join(map(str, freq.values())))  # Frequencies of unique words
