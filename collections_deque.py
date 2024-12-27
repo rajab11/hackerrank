@@ -45,5 +45,6 @@ for _ in range(n):
     if oper=='appendleft':
         d.appendleft(inputs[1])  
 
+
 print(*d)
     
