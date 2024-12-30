@@ -11,7 +11,9 @@ if __name__ == '__main__':
     s = input()
 
     char_count=Counter(s)
-    print(char_count)
+    
+    sorted_characters=sorted(char_count.items(),key=lambda x:(-x[1],x[0]))
 
     #output
-    print(' '.join(f"{char} {count}" for char,count in char_count.items()))
+    for char,count in sorted_characters[:3]:
+        print(char,count)
