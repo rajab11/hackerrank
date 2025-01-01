@@ -49,7 +49,6 @@ from collections import Counter
 if __name__ == '__main__':
     #input
     s = input()
-
     char_count=Counter(s)
     
     sorted_characters=sorted(char_count.items(),key=lambda x:(-x[1],x[0]))
