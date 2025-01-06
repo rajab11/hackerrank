@@ -36,13 +36,8 @@ Here, b occurs  times. It is printed first.
 Both a and c occur  times. So, a is printed in the second line and c in the third line because a comes before c in the alphabet.
 
 Note: The string  has at least  distinct characters.
-
 """
-import math
-import os
-import random
-import re
-import sys
+
 from collections import Counter
 
 
