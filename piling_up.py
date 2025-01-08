@@ -48,19 +48,27 @@ In the first test case, pick in this order: left - , right - , left - , right - 
 In the second test case, no order gives an appropriate arrangement of vertical cubes.  will always come after either  or .
 
 """
+from collections import deque
 
-#input
-t=int(input())
+t=int(input()) #input of number of test cases
 
 for _ in range(t):
-    n=int(input())
-    blocks=input().split()
-    for i in range(n//2):
-        left=blocks[i]
-        right=blocks[-1-i]
-        max_value=max(left,right)
-        if max_value>=blocks[i+1]:
-            print(max_value,blocks[i+1],'Yes')
+    n=int(input()) #number of cubes
+    blocks=deque(map(int,input().split())) #input the side lengths
+
+    last_picked=float('inf') #starting with infiniary large blocks
+    possible=True
+
+    while blocks:
+        if blocks[0]>=blocks[-1]:
+            chosen=blocks.popleft()
         else:
-            print('No')
+            chosen=blocks.pop()
+        
+        if chosen>last_picked:
+            possible=False
+            break
+        
+        last_picked=chosen
     
+    print("Yes" if possible else "No")
