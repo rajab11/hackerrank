@@ -36,7 +36,6 @@ Explanation 0
 In the first query, when we compare the time in UTC for both the time stamps, we see a difference of 7 hours. which is  seconds or  seconds.
 
 Similarly, in the second query, time difference is 5 hours and 30 minutes for time zone adjusting for that we have a difference of 1 day and 30 minutes. Or 
-
 """
 import math
 import os
@@ -46,7 +45,7 @@ import sys
 
 # Complete the time_delta function below.
 def time_delta(t1, t2):
-    return t2-t1
+    return t2-t1/2
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
