@@ -48,6 +48,7 @@ def time_delta(t1, t2):
     return t2-t1/2
 
 if __name__ == '__main__':
+
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     t = int(input())
