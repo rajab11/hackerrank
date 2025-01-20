@@ -42,6 +42,7 @@ import os
 import random
 import re
 import sys
+from datetime import datetime
 
 # Complete the time_delta function below.
 def time_delta(t1, t2):
@@ -49,11 +50,13 @@ def time_delta(t1, t2):
     format_str = "%a %d %b %Y %H:%M:%S %z"
     datetime1 = datetime.strptime(t1, format_str)
     datetime2 = datetime.strptime(t2, format_str)
-    
+
     difference = abs(int((datetime1 - datetime2).total_seconds()))
     return str(difference)
 
 if __name__ == '__main__':
+
+    os.environ['OUTPUT_PATH']='output.txt'
 
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
