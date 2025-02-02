@@ -30,7 +30,8 @@ Hence, the output is True.
 
 
 """
-x,k=map(int,input().split()) #single indeterminate
+x, k=map(int,input().split()) #single indeterminate
+
 
 
 
