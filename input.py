@@ -27,10 +27,16 @@ Explanation
 
 Hence, the output is True.
 
-
-
 """
-x, k=map(int,input().split()) #single indeterminate
+x, k=map(int,input().split()) # Read x and k as integers
+
+polynomial=input().strip() #Read polynomial  as string
+
+result=eval(polynomial,{"x":x})
+
+print(result==k)
+
+
 
 
 
