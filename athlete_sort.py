@@ -6,8 +6,6 @@ import random
 import re
 import sys
 
-
-
 if __name__ == '__main__':
     first_multiple_input = input().rstrip().split()
 
@@ -22,4 +20,6 @@ if __name__ == '__main__':
 
     k = int(input().strip())
 
-    result=sorted(arr,key=lambda )
+    result=sorted(arr,key=lambda x:x[k])
+    for r in result:
+        print(' '.join(map(str,r)))    
